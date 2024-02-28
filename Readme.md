@@ -3,9 +3,9 @@
 #### Code summary
 First, I generate all of the pipes using for loops. We are going to need 2 sets of pipes, one set of pipes will be used for the parent to write to the children, and the other set will be for the children to write to the parent.
 
-Second, once I established bi-directional communication between children and parents (meaning that parents could send values to children, children could do something to the values, write back, and parents could read), then I started working on the `calculateArea` function. After I re-taught myself the fundamental theory of Calculus, I was able to write a function that calculates the area under the curve from some x value to another x value.
+Second, once I established communication between children and parents (meaning that parents could send values to children, children could do something to the values, write back the edited value, and parents could then read the edited value), then I started working on the `calculateArea` function. After I re-taught myself the fundamental theory of Calculus, I was able to write a function that calculates the area under the curve from some x value to another x value. This is how I wanted to approach this problem, so this way, I could assign each child process a portion of the area we wanted to calculate.
 
-Third, I called the `calculateArea` function accordingly, strategically calculating the area of certain parts of the function by assigning the work to the children.
+Third, I called the `calculateArea` function accordingly to calculate the area of certain parts of the function by assigning the work to the children.
 
 Lastly, I wrote the value back to the parent, which kept a running tally of areas returned from the children.
 
